@@ -3,6 +3,8 @@
 
 import axios from 'axios';
 
+
+//criando uma instancia do axios
 const api = axios.create({
 
     baseURL: 'https://api.themoviedb.org/3/'

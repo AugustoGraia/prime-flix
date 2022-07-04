@@ -1,0 +1,28 @@
+.not-fount{
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.not-fount h1 {
+    font-size: 120px;
+}
+
+.not-fount a {
+    text-decoration: none;
+    background-color: rgb(7, 6, 63);
+    padding: 10px;;
+    color: #ffff;
+    margin-top: 10px;
+    border-radius: 18px;
+    transition: all 0.5s;
+
+}
+
+.not-fount a:hover{
+    background-color: firebrick;
+    color: black;
+}
