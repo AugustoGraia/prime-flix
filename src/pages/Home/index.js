@@ -34,8 +34,8 @@ function Home(){
 
         if(loading){
             return(
-                <div className="loading">
-                    <h2>Carregando......</h2>
+                <div className="filme-load">
+                    <div className="spinner"></div>
                 </div>
             )
         }
