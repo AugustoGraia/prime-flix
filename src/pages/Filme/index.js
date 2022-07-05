@@ -48,6 +48,28 @@ function Filme(){
         )
     }
 
+
+    function salvarFime(){
+        const minhaLista = localStorage.getItem("@primeflix");
+
+        // buscando no local se já tem alguma coisa se não tiver apenas cria o array vazio.
+        let filmesSalvo = JSON.parse(minhaLista) || [];
+
+        // verifica se ele é igual a alguma coisa que já esta no localStorage por ID
+       const hasFilme = filmesSalvo.some( (filmesSalvo) => filmesSalvo.id === filme.id)
+
+        // verifica se já esta na lista 
+       if(hasFilme == true) {
+        alert("Já esta na lista ")
+        return;
+
+       }
+       // Incerindo na chavo o valor de filmes
+       filmesSalvo.push(filme);
+       localStorage.setItem("@primeflix", JSON.stringify(filmesSalvo));
+       alert("salvo com sucesso")
+    }
+
     return(
          <div className="filme-info">
             <h1>{filme.title}</h1>
@@ -58,9 +80,9 @@ function Filme(){
             <strong>Avaliação: {filme.vote_average} / 10</strong>
 
             <div className='area-buttons'>
-                <button>Salvar</button>
+                <button onClick={salvarFime}>Salvar</button>
                 <button>
-                    <a target="_blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title} Trailer Portugues`}>
+                    <a target="blank" rel="external" href={`https://youtube.com/results?search_query=${filme.title} Trailer Portugues`}>
                         Trailer
                     </a>
                 </button>
