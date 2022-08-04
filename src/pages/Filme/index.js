@@ -53,7 +53,7 @@ function Filme(){
     function salvarFime(){
         const minhaLista = localStorage.getItem("@primeflix");
 
-        // buscando no local se já tem alguma coisa se não tiver apenas cria o array vazio.
+        // buscando no local se já tem alguma coisa, se não tiver apenas cria o array vazio.
         let filmesSalvo = JSON.parse(minhaLista) || [];
 
         // verifica se ele é igual a alguma coisa que já esta no localStorage por ID
@@ -65,7 +65,7 @@ function Filme(){
         return;
 
        }
-       // Incerindo na chavo o valor de filmes
+       // Incerindo na chave o valor de filmes
        filmesSalvo.push(filme);
        localStorage.setItem("@primeflix", JSON.stringify(filmesSalvo));
        toast.success("Filme salvo com sucesso!")

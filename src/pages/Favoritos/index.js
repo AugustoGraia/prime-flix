@@ -18,7 +18,7 @@ useEffect(() =>{
 
 },[]); 
 
-// Remvendo o filme dos favoritos
+// Removendo o filme dos favoritos e devolvendo os filmes que tenha id diferende de filmes
 function excluirFilme(id){
     let filtros = filmes.filter((item) =>{
         return (item.id !== id)
